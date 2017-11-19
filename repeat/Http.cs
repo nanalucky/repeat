@@ -13,9 +13,26 @@ using System.Diagnostics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
+using DxComOperate;
 
 namespace repeat
 {
+
+    public class HttpParam
+    { 
+        public static void SendSession(Session oSession, bool bAsync = true)
+        {
+            DxWinHttp http = new DxWinHttp();
+            http.Open(oSession.RequestMethod, oSession.fullUrl, bAsync);
+            http.SetProxy(2, "127.0.0.1:8888", "0");
+            for (int i = 0; i < oSession.RequestHeaders.Count(); ++i)
+            {
+                http.SetRequestHeader(oSession.RequestHeaders[i].Name, oSession.RequestHeaders[i].Value);
+            }
+            http.Send(oSession.GetRequestBodyAsString());
+        }
+    };
+
     public class Player
     {
     };
@@ -41,6 +58,8 @@ namespace repeat
                 oAllSessions.AddRange(oLoaded);
                 //WriteCommandResponse("Loaded: " + oLoaded.Length + " sessions.");
             }
+
+            HttpParam.SendSession(oLoaded[0]);
         }
 
         public static void doRun()
@@ -68,17 +87,17 @@ namespace repeat
 
             Console.WriteLine(String.Format("Starting {0} ({1})...", Fiddler.FiddlerApplication.GetVersionString(), sSAZInfo));
 
-            Fiddler.CONFIG.IgnoreServerCertErrors = false;
-            FiddlerApplication.Prefs.SetBoolPref("fiddler.network.streaming.abortifclientaborts", true);
-            FiddlerCoreStartupFlags oFCSF = FiddlerCoreStartupFlags.Default;
-            int iPort = 8877;
-            Fiddler.FiddlerApplication.Startup(iPort, oFCSF);
+            //Fiddler.CONFIG.IgnoreServerCertErrors = false;
+            //FiddlerApplication.Prefs.SetBoolPref("fiddler.network.streaming.abortifclientaborts", true);
+            //FiddlerCoreStartupFlags oFCSF = FiddlerCoreStartupFlags.Default;
+            //int iPort = 8877;
+            //Fiddler.FiddlerApplication.Startup(iPort, oFCSF);
         }
 
 
         public static void doQuit()
         {
-            Fiddler.FiddlerApplication.Shutdown();        
+            //Fiddler.FiddlerApplication.Shutdown();        
         }
     };
      
