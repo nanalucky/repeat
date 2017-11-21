@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBoxAccount = new System.Windows.Forms.TextBox();
-            this.textBoxConfig = new System.Windows.Forms.TextBox();
             this.textBoxThreadNum = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxSetProxy = new System.Windows.Forms.TextBox();
@@ -47,36 +44,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(997, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 82);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBoxAccount
-            // 
-            this.textBoxAccount.Enabled = false;
-            this.textBoxAccount.Location = new System.Drawing.Point(997, 171);
-            this.textBoxAccount.Name = "textBoxAccount";
-            this.textBoxAccount.Size = new System.Drawing.Size(525, 28);
-            this.textBoxAccount.TabIndex = 44;
-            // 
-            // textBoxConfig
-            // 
-            this.textBoxConfig.Enabled = false;
-            this.textBoxConfig.Location = new System.Drawing.Point(997, 137);
-            this.textBoxConfig.Name = "textBoxConfig";
-            this.textBoxConfig.Size = new System.Drawing.Size(525, 28);
-            this.textBoxConfig.TabIndex = 43;
-            // 
             // textBoxThreadNum
             // 
             this.textBoxThreadNum.Enabled = false;
-            this.textBoxThreadNum.Location = new System.Drawing.Point(893, 132);
+            this.textBoxThreadNum.Location = new System.Drawing.Point(846, 37);
             this.textBoxThreadNum.Name = "textBoxThreadNum";
             this.textBoxThreadNum.Size = new System.Drawing.Size(84, 28);
             this.textBoxThreadNum.TabIndex = 42;
@@ -86,7 +57,7 @@
             // 
             this.label10.BackColor = System.Drawing.SystemColors.Control;
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label10.Location = new System.Drawing.Point(725, 123);
+            this.label10.Location = new System.Drawing.Point(678, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(147, 42);
             this.label10.TabIndex = 41;
@@ -96,7 +67,7 @@
             // textBoxSetProxy
             // 
             this.textBoxSetProxy.Enabled = false;
-            this.textBoxSetProxy.Location = new System.Drawing.Point(203, 137);
+            this.textBoxSetProxy.Location = new System.Drawing.Point(203, 37);
             this.textBoxSetProxy.Name = "textBoxSetProxy";
             this.textBoxSetProxy.Size = new System.Drawing.Size(84, 28);
             this.textBoxSetProxy.TabIndex = 40;
@@ -106,7 +77,7 @@
             // 
             this.label8.BackColor = System.Drawing.SystemColors.Control;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Location = new System.Drawing.Point(31, 128);
+            this.label8.Location = new System.Drawing.Point(31, 28);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 42);
             this.label8.TabIndex = 39;
@@ -116,7 +87,7 @@
             // textBoxStartTime
             // 
             this.textBoxStartTime.Enabled = false;
-            this.textBoxStartTime.Location = new System.Drawing.Point(203, 202);
+            this.textBoxStartTime.Location = new System.Drawing.Point(203, 93);
             this.textBoxStartTime.Name = "textBoxStartTime";
             this.textBoxStartTime.Size = new System.Drawing.Size(124, 28);
             this.textBoxStartTime.TabIndex = 38;
@@ -126,7 +97,7 @@
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(31, 193);
+            this.label1.Location = new System.Drawing.Point(31, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 42);
             this.label1.TabIndex = 37;
@@ -135,9 +106,9 @@
             // 
             // buttonRun
             // 
-            this.buttonRun.Location = new System.Drawing.Point(31, 38);
+            this.buttonRun.Location = new System.Drawing.Point(983, 37);
             this.buttonRun.Name = "buttonRun";
-            this.buttonRun.Size = new System.Drawing.Size(147, 62);
+            this.buttonRun.Size = new System.Drawing.Size(147, 79);
             this.buttonRun.TabIndex = 36;
             this.buttonRun.Text = "运行";
             this.buttonRun.UseVisualStyleBackColor = true;
@@ -146,7 +117,7 @@
             // textBoxEndTime
             // 
             this.textBoxEndTime.Enabled = false;
-            this.textBoxEndTime.Location = new System.Drawing.Point(550, 202);
+            this.textBoxEndTime.Location = new System.Drawing.Point(532, 93);
             this.textBoxEndTime.Name = "textBoxEndTime";
             this.textBoxEndTime.Size = new System.Drawing.Size(124, 28);
             this.textBoxEndTime.TabIndex = 46;
@@ -156,7 +127,7 @@
             // 
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(378, 193);
+            this.label2.Location = new System.Drawing.Point(360, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 42);
             this.label2.TabIndex = 45;
@@ -166,7 +137,7 @@
             // textBoxSazFile
             // 
             this.textBoxSazFile.Enabled = false;
-            this.textBoxSazFile.Location = new System.Drawing.Point(893, 202);
+            this.textBoxSazFile.Location = new System.Drawing.Point(846, 98);
             this.textBoxSazFile.Name = "textBoxSazFile";
             this.textBoxSazFile.Size = new System.Drawing.Size(84, 28);
             this.textBoxSazFile.TabIndex = 48;
@@ -176,7 +147,7 @@
             // 
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(725, 193);
+            this.label3.Location = new System.Drawing.Point(678, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 42);
             this.label3.TabIndex = 47;
@@ -185,16 +156,16 @@
             // 
             // richTextBoxStatus
             // 
-            this.richTextBoxStatus.Location = new System.Drawing.Point(31, 257);
+            this.richTextBoxStatus.Location = new System.Drawing.Point(31, 172);
             this.richTextBoxStatus.Name = "richTextBoxStatus";
-            this.richTextBoxStatus.Size = new System.Drawing.Size(1052, 591);
+            this.richTextBoxStatus.Size = new System.Drawing.Size(1099, 685);
             this.richTextBoxStatus.TabIndex = 49;
             this.richTextBoxStatus.Text = "";
             // 
             // textBoxRepeat
             // 
             this.textBoxRepeat.Enabled = false;
-            this.textBoxRepeat.Location = new System.Drawing.Point(550, 137);
+            this.textBoxRepeat.Location = new System.Drawing.Point(532, 37);
             this.textBoxRepeat.Name = "textBoxRepeat";
             this.textBoxRepeat.Size = new System.Drawing.Size(84, 28);
             this.textBoxRepeat.TabIndex = 51;
@@ -204,7 +175,7 @@
             // 
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(378, 128);
+            this.label4.Location = new System.Drawing.Point(360, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 42);
             this.label4.TabIndex = 50;
@@ -223,8 +194,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxEndTime);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxAccount);
-            this.Controls.Add(this.textBoxConfig);
             this.Controls.Add(this.textBoxThreadNum);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBoxSetProxy);
@@ -232,7 +201,6 @@
             this.Controls.Add(this.textBoxStartTime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRun);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -244,9 +212,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBoxAccount;
-        private System.Windows.Forms.TextBox textBoxConfig;
         private System.Windows.Forms.TextBox textBoxThreadNum;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxSetProxy;

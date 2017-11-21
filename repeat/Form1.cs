@@ -21,11 +21,6 @@ namespace repeat
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            repeatFiddler.doRun();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             repeatFiddler.Init();
@@ -34,6 +29,7 @@ namespace repeat
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             repeatFiddler.doQuit();
+            Environment.Exit(0);
         }
 
         private void buttonRun_Click(object sender, EventArgs e)
@@ -74,6 +70,18 @@ namespace repeat
             //滚动到控件光标处   
             richTextBoxStatus.ScrollToCaret();
             richTextBoxStatus.AppendText(strAdd);
+        }
+
+        public delegate void DelegateButtonRun_Enabled();
+        public void buttonRun_Enabled()
+        {
+            if (this.InvokeRequired)
+            {
+                this.BeginInvoke(new DelegateButtonRun_Enabled(buttonRun_Enabled), new object[] { });
+                return;
+            }
+
+            buttonRun.Enabled = true;
         }
 
     }
