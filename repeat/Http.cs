@@ -69,7 +69,11 @@ namespace repeat
                 Program.form1.richTextBoxStatus_AddString(string.Format("{0}-{1}开始发送\n", nStartIndex, nStartIndex + listSession.Count() - 1));
                 foreach (Session session in listSession)
                 {
-                    HttpParam.SendSession(session);    
+                    HttpParam.SendSession(session);
+                    if (AllPlayers.nIntervalMS > 0)
+                    {
+                        Thread.Sleep(AllPlayers.nIntervalMS);
+                    }
                 }
                 Program.form1.richTextBoxStatus_AddString(string.Format("{0}-{1}发送完成\n", nStartIndex, nStartIndex + listSession.Count() - 1));
             }
@@ -87,6 +91,19 @@ namespace repeat
                     if (nIndex % nCount == 0)
                     {
                         Program.form1.richTextBoxStatus_AddString(string.Format("{0}-{1}发送完第{2}轮\n", nStartIndex, nStartIndex + listSession.Count() - 1, (int)(nIndex / nCount)));
+
+                        if (AllPlayers.nRepeatNum > 0)
+                        {
+                            if ((int)(nIndex / nCount) >= AllPlayers.nRepeatNum)
+                            {
+                                break;   
+                            }
+                        }
+                    }
+
+                    if (AllPlayers.nIntervalMS > 0)
+                    {
+                        Thread.Sleep(AllPlayers.nIntervalMS);
                     }
                 }
             }
@@ -98,6 +115,8 @@ namespace repeat
         public static bool bSetProxy = false;
         public static bool bRepeat = false;
         public static int nThreadNum;
+        public static int nRepeatNum;
+        public static int nIntervalMS;
         public static DateTime dtStartTime;
         public static DateTime dtEndTime;
         public static string strSazFile = @"";
@@ -128,6 +147,8 @@ namespace repeat
             else
                 bRepeat = true;
             nThreadNum = (int)joInfo["ThreadNum"];
+            nRepeatNum = (int)joInfo["RepeatNum"];
+            nIntervalMS = (int)joInfo["IntervalMS"];
             dtStartTime = DateTime.Parse((string)joInfo["StartTime"]);
             dtEndTime = DateTime.Parse((string)joInfo["EndTime"]);
             strSazFile = (string)joInfo["SazFile"];

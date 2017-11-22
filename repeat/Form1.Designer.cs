@@ -42,6 +42,10 @@
             this.richTextBoxStatus = new System.Windows.Forms.RichTextBox();
             this.textBoxRepeat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxRepeatNum = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxIntervalMS = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxThreadNum
@@ -117,7 +121,7 @@
             // textBoxEndTime
             // 
             this.textBoxEndTime.Enabled = false;
-            this.textBoxEndTime.Location = new System.Drawing.Point(532, 93);
+            this.textBoxEndTime.Location = new System.Drawing.Point(203, 151);
             this.textBoxEndTime.Name = "textBoxEndTime";
             this.textBoxEndTime.Size = new System.Drawing.Size(124, 28);
             this.textBoxEndTime.TabIndex = 46;
@@ -127,7 +131,7 @@
             // 
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(360, 84);
+            this.label2.Location = new System.Drawing.Point(31, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 42);
             this.label2.TabIndex = 45;
@@ -156,9 +160,9 @@
             // 
             // richTextBoxStatus
             // 
-            this.richTextBoxStatus.Location = new System.Drawing.Point(31, 172);
+            this.richTextBoxStatus.Location = new System.Drawing.Point(31, 217);
             this.richTextBoxStatus.Name = "richTextBoxStatus";
-            this.richTextBoxStatus.Size = new System.Drawing.Size(1099, 685);
+            this.richTextBoxStatus.Size = new System.Drawing.Size(1099, 640);
             this.richTextBoxStatus.TabIndex = 49;
             this.richTextBoxStatus.Text = "";
             // 
@@ -182,11 +186,55 @@
             this.label4.Text = "Repeat";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBoxRepeatNum
+            // 
+            this.textBoxRepeatNum.Enabled = false;
+            this.textBoxRepeatNum.Location = new System.Drawing.Point(532, 93);
+            this.textBoxRepeatNum.Name = "textBoxRepeatNum";
+            this.textBoxRepeatNum.Size = new System.Drawing.Size(84, 28);
+            this.textBoxRepeatNum.TabIndex = 53;
+            this.textBoxRepeatNum.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(360, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(147, 42);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "RepeatNum";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxIntervalMS
+            // 
+            this.textBoxIntervalMS.Enabled = false;
+            this.textBoxIntervalMS.Location = new System.Drawing.Point(532, 151);
+            this.textBoxIntervalMS.Name = "textBoxIntervalMS";
+            this.textBoxIntervalMS.Size = new System.Drawing.Size(84, 28);
+            this.textBoxIntervalMS.TabIndex = 55;
+            this.textBoxIntervalMS.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(360, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 42);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "IntervalMS";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1179, 898);
+            this.Controls.Add(this.textBoxIntervalMS);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxRepeatNum);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxRepeat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.richTextBoxStatus);
@@ -226,6 +274,10 @@
         private System.Windows.Forms.RichTextBox richTextBoxStatus;
         private System.Windows.Forms.TextBox textBoxRepeat;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxRepeatNum;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxIntervalMS;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -50,6 +50,8 @@ namespace repeat
             else
                 textBoxRepeat.Text = "false";
             textBoxThreadNum.Text = Convert.ToString(AllPlayers.nThreadNum);
+            textBoxRepeatNum.Text = Convert.ToString(AllPlayers.nRepeatNum);
+            textBoxIntervalMS.Text = Convert.ToString(AllPlayers.nIntervalMS);
             textBoxStartTime.Text = AllPlayers.dtStartTime.ToShortTimeString();
             textBoxEndTime.Text = AllPlayers.dtEndTime.ToShortTimeString();
             textBoxSazFile.Text = AllPlayers.strSazFile;
