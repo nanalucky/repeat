@@ -178,8 +178,12 @@ namespace repeat
                 string[] arrayWhite = File.ReadAllLines(strWhiteListFileName);
                 for (int nWhite = 0; nWhite < arrayWhite.Length; ++nWhite)
                 {
-                    string[] arrayParam = arrayWhite[nWhite].Split(new string[] { "####" }, System.StringSplitOptions.None);
-                    listWhite.Add(arrayParam[arrayParam.Length - 1]);
+                    string str = arrayWhite[nWhite].Trim();
+                    if (str != "")
+                    {
+                        string[] arrayParam = arrayWhite[nWhite].Split(new string[] { "####" }, System.StringSplitOptions.None);
+                        listWhite.Add(arrayParam[arrayParam.Length - 1]);
+                    }
                 }
             }
 
@@ -190,8 +194,12 @@ namespace repeat
                 string[] arrayBlack = File.ReadAllLines(strBlackListFileName);
                 for (int nBlack = 0; nBlack < arrayBlack.Length; ++nBlack)
                 {
-                    string[] arrayParam = arrayBlack[nBlack].Split(new string[] { "####" }, System.StringSplitOptions.None);
-                    listBlack.Add(arrayParam[arrayParam.Length - 1]);
+                    string str = arrayBlack[nBlack].Trim();
+                    if (str != "")
+                    {
+                        string[] arrayParam = arrayBlack[nBlack].Split(new string[] { "####" }, System.StringSplitOptions.None);
+                        listBlack.Add(arrayParam[arrayParam.Length - 1]);
+                    }
                 }
             }
 
